@@ -3,6 +3,6 @@
 
 Содержит GUI интерфейс.
 
-Скрины:
+ ## Скрины:
 
 ![screenshot of sample](screenshots/1.png) 	&nbsp;&nbsp; ![screenshot of sample](screenshots/2.png)
