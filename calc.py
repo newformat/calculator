@@ -37,8 +37,6 @@ class MainCalculator(QtWidgets.QMainWindow, Ui_MainForm):
         self.pushButton_ravno.clicked.connect(self.result)
         self.pushButton_dot.clicked.connect(partial(self.set_symbol, '.'))
         self.pushButton_plus_minus.clicked.connect(self.append_minus)
-        # не доработаные (отключены)
-        self.pushButton_proc.setDisabled(True)
 
 
     def set_symbol(self, data):
@@ -55,7 +53,6 @@ class MainCalculator(QtWidgets.QMainWindow, Ui_MainForm):
                 self.expression.append(self.result_show.text())
                 self.expression.append(data)
                 self.result_show.clear()
-
 
 
     def check_dot(self, data):
@@ -98,5 +95,6 @@ class MainCalculator(QtWidgets.QMainWindow, Ui_MainForm):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = MainCalculator()
+    window.setFixedSize(window.width(),window.height())
     window.show()
     app.exec_()
